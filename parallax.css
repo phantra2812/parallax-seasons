@@ -1,0 +1,221 @@
+body, html {
+    font-family: 'Pinyon Script', cursive;
+    height: 100%;
+    width: 100%
+    margin: 0 auto;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+.welcome {
+  /*background: hsla(170, 50%, 45%, 1);*/
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+h1 {
+  width: 530px;
+  display: inline-block;
+  margin: 0;
+  padding-top: 90px;
+  padding-left:70px;
+  font-family: 'Great Vibes', cursive;
+  font-size: 85px;
+  background: -webkit-linear-gradient(-45deg, #3E41CE 0%, #6747CA 17%, #804FCB 33%, #0024CB 67%, #6747CA 83%,#0B065A 100%);
+  /*background: url('images/fuji.jpg');*/
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.indicator-container {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  width: 4.2em;
+  height: 8.4em/*calc(6.4em * 1.75)*/;
+  background: transparent;
+  border: 5px solid #0B065A;
+  border-radius: 6.4em;
+  overflow: hidden;
+  box-shadow:
+    0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.2),
+    inset 0 6px 8px 0 rgba(0, 0, 0, 0.2)
+    ;
+}
+
+.indicator-arrow {
+  margin-top: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+
+}
+
+.indicator-arrow .base {
+    margin: 0 auto;
+    width: calc(6.4em * 0.1);
+    background: #0B065A;
+    height: calc(6.4em * 0.33);
+    border-radius: calc(6.4em * 0.1);
+  }
+
+.indicator-arrow .arrowpoint {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width:
+      calc(6.4em * 0.175) calc(6.4em * 0.175)
+      0 calc(6.4em * 0.175);
+    border-color:
+      #0B065A transparent
+      transparent transparent;
+    margin-top: -10%;
+  }
+
+.top {
+  margin-top: -100%;
+  /*animation: arrowAnimation1 infinite 1.5s ease-in-out;*/
+}
+
+.bottom {
+  margin-top: 124%;
+}
+
+@keyframes arrowAnimation1 {
+    from {margin-top: -100%;}
+    to {margin-top: 90%;}
+}
+
+
+.seasons {
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+}
+
+.welcome {
+  background-image: url('images/fuji.jpg');
+}
+
+.spring {
+  background-image: url('images/sakura.jpg');
+}
+
+.summer {
+  background-image: url('images/summer.jpg');
+}
+
+.autumn {
+  background-image: url('images/fall.jpeg');
+}
+
+.winter {
+  background-image: url('images/winter.jpg');
+}
+
+.wrapper {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 235px;
+  height: 120px;
+  white-space: nowrap;
+}
+
+.wrapper_spring {
+  left: 75%;
+  top: 160%;
+}
+
+.wrapper_summer {
+  left: 15%;
+  top: 280%;
+}
+
+.wrapper_autumn {
+  left: 15%;
+  top: 400%;
+}
+
+.wrapper_winter {
+  left: 75%;
+  top: 530%;
+}
+
+.focus {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: 'Great Vibes', cursive;
+  letter-spacing: 7px;
+  filter: blur(3px);
+  font-size: 100px;
+  opacity: 0.6;
+  color: #fff;
+}
+
+.mask {
+  position: absolute;
+  /*left: -5px;*/
+  top: -2px;
+  font-family: 'Great Vibes', cursive;
+  letter-spacing: 7px;
+  font-size: 100px;
+  background: linear-gradient(#fff, #fff 0) no-repeat, linear-gradient(to right, #fff, #fff 0) no-repeat, linear-gradient(to right, #fff, #fff 0) bottom left no-repeat, linear-gradient(to right, #fff, #fff 0) bottom left no-repeat, linear-gradient(#fff, #fff 0) bottom right no-repeat, linear-gradient(#fff, #fff 0) bottom right no-repeat, linear-gradient(#fff, #fff 0) top right no-repeat, linear-gradient(#fff, #fff 0) top right no-repeat;
+  background-size: 10px 2px, 2px 10px, 2px 10px, 10px 2px, 2px 10px, 10px 2px, 10px 2px, 2px 10px, 10px 2px;
+  color: #fff;
+  /*padding: 5px;*/
+  transform: translateX(0);
+  box-sizing: border-box;
+  /*animation: mask 2.5s ease infinite alternate;*/
+}
+
+.mask_spring, .mask_autumn {
+  width: 80px;
+  clip: rect(0px, 80px, 125px, 0px);
+}
+
+.mask_summer {
+  width: 100px;
+  clip: rect(0px, 100px, 125px, 0px);
+}
+
+ .mask_winter {
+  width: 90px;
+  clip: rect(0px, 90px, 125px, 0px);
+ }
+
+.text {
+  transform: translateX(0);
+  /*animation: text 2.5s ease infinite alternate;*/
+}
+
+@keyframes mask {
+  to {
+    transform: translateX(210px);
+  }
+}
+
+@keyframes text {
+  to {
+    transform: translateX(-210px);
+  }
+}
+
+.box h3 {
+  text-align: center;
+}
